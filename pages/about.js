@@ -1,9 +1,13 @@
-import Head from "next/head";
- export default () => (
+import Link from "next/link";
+import withLayout from "../lib/withLayout";
+
+const About = () => (
     <div>
-        <Head>
-            <title>About | Lim Store</title>
-        </Head>
-        <h1>About page</h1>
+        <h1>Hello NextJs</h1>{""}
+        <Link href={"/about"}>
+            <a>About page</a>
+        </Link>
     </div>
 );
+
+export default withLayout(About);

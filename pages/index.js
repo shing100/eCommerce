@@ -1,10 +1,14 @@
-import Link from "next/link";
+import Head from "next/head";
+import Header from "../components/Header";
+import withLayout from "../lib/withLayout";
 
-export default () => (
+const Index = () => (
     <div>
-        <h1>Hello NextJs</h1>{""}
-        <Link href={"/about"}>
-            <a>About page</a>
-        </Link>
+        <Head>
+            <title>About | Lim Store</title>
+        </Head>
+        <h1>Hellow from the index</h1>
     </div>
 );
+
+export default withLayout(Index);
