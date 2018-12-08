@@ -112,7 +112,7 @@ module.exports = __webpack_require__(/*! next/document */ "next/document")
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/geunlim/Documents/project/nextjs_pwa/node_modules/next/dist/pages/_document.js */"./node_modules/next/dist/pages/_document.js");
+module.exports = __webpack_require__(/*! C:\Users\shing\Documents\nextjs-stone\node_modules\next\dist\pages\_document.js */"./node_modules/next/dist/pages/_document.js");
 
 
 /***/ }),
