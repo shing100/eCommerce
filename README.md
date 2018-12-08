@@ -1,4 +1,4 @@
-# nextjs-stone
+# eCommerce
 Graph CMS, now.sh, NextJs, ReactJs
 
 ## 준비할것
