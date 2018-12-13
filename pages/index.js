@@ -9,10 +9,10 @@ export default () => (
         <h1>Post:</h1>
         <ul>
             <li>
-                <PostLink title={"Something"} />
+                <PostLink title={"Something"} id={0} />
             </li>
             <li>
-                <PostLink title={"Something else"} />
+                <PostLink title={"Something else"} id={1} />
             </li>
         </ul>
     </div>
