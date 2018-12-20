@@ -8,7 +8,7 @@ Graph CMS, now.sh, NextJs, ReactJs
 ### install
 - yarn add next
 - yarn add express
-
+- yarn add graphql apollo-boost react-apollo next-with-apollo
 
 ### NextJS Theory
  
@@ -25,6 +25,6 @@ Graph CMS, now.sh, NextJs, ReactJs
 
 ### NextJS Practice Project
 - [x] Defining the Pages
-- [ ] Custom App Component
-- [ ] Custom Document Component
-- [ ] Fetching Data with NextJS
+- [x] Custom App Component
+- [x] Custom Document Component
+- [x] Fetching Data with NextJS
