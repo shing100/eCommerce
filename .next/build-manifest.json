@@ -15,11 +15,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/search": [
+    "/category": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/category": [
+    "/cart": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/search": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

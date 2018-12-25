@@ -103,7 +103,7 @@ module.exports =
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_URL", function() { return API_URL; });
-var API_URL = "";
+var API_URL = "https://api-apeast.graphcms.com/v1/cjpf0n0pc25d401htisel8t9e/master";
 
 /***/ }),
 

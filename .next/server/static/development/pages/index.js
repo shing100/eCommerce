@@ -185,10 +185,57 @@ var Header = antd__WEBPACK_IMPORTED_MODULE_1__["Layout"].Header;
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/index/index.js":
+/*!******************************!*\
+  !*** ./pages/index/index.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _indexContainer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./indexContainer */ "./pages/index/indexContainer.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (_indexContainer__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/***/ }),
+
+/***/ "./pages/index/indexContainer.js":
+/*!***************************************!*\
+  !*** ./pages/index/indexContainer.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-apollo */ "react-apollo");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _indexPresenter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./indexPresenter */ "./pages/index/indexPresenter.js");
+/* harmony import */ var _indexQueries__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./indexQueries */ "./pages/index/indexQueries.js");
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Query"], {
+    query: _indexQueries__WEBPACK_IMPORTED_MODULE_3__["INDEX_QUERY"]
+  }, function (_ref) {
+    var data = _ref.data;
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_indexPresenter__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      data: data
+    });
+  });
+});
+
+/***/ }),
+
+/***/ "./pages/index/indexPresenter.js":
+/*!***************************************!*\
+  !*** ./pages/index/indexPresenter.js ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -198,8 +245,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
-/* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Button */ "./components/Button.js");
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Header */ "./components/Header.js");
+/* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Button */ "./components/Button.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "antd");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -233,39 +280,55 @@ var Content = antd__WEBPACK_IMPORTED_MODULE_4__["Layout"].Content;
       gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
       width: "100%"
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    href: "/category?name=men",
-    hrefAs: "/category/men",
-    text: "Men"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    href: "/category?name=men",
-    hrefAs: "/category/men",
-    text: "Women"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    href: "/category?name=men",
-    hrefAs: "/category/men",
-    text: "Shoes"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    href: "/category?name=men",
-    hrefAs: "/category/men",
-    text: "Suits"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    href: "/category?name=men",
-    hrefAs: "/category/men",
-    text: "Dresses"
+  }, data && data.categories && data.categories.map(function (category) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      key: category.id,
+      href: "/category?name=".concat(category.name.toLowerCase()),
+      hrefAs: "/category/".concat(category.name.toLowerCase()),
+      text: category.name
+    });
   }))));
 });
 
 /***/ }),
 
+/***/ "./pages/index/indexQueries.js":
+/*!*************************************!*\
+  !*** ./pages/index/indexQueries.js ***!
+  \*************************************/
+/*! exports provided: INDEX_QUERY */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "INDEX_QUERY", function() { return INDEX_QUERY; });
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_0__);
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n{\n    categories {\n        id\n        name\n    }\n}\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+var INDEX_QUERY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_0__["gql"])(_templateObject());
+
+/***/ }),
+
 /***/ 3:
-/*!******************************!*\
-  !*** multi ./pages/index.js ***!
-  \******************************/
+/*!************************************!*\
+  !*** multi ./pages/index/index.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! ./pages/index/index.js */"./pages/index/index.js");
 
 
 /***/ }),
@@ -278,6 +341,17 @@ module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 /***/ (function(module, exports) {
 
 module.exports = require("antd");
+
+/***/ }),
+
+/***/ "apollo-boost":
+/*!*******************************!*\
+  !*** external "apollo-boost" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("apollo-boost");
 
 /***/ }),
 
@@ -311,6 +385,17 @@ module.exports = require("next/link");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-apollo":
+/*!*******************************!*\
+  !*** external "react-apollo" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-apollo");
 
 /***/ })
 
