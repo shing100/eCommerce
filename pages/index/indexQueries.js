@@ -6,5 +6,17 @@ export const INDEX_QUERY = gql`
         id
         name
     }
+    products(where: {
+        sale: true
+    }) {
+        id
+        name
+        subtitle
+        description
+        price
+        photo {
+            url
+        }
+    }
 }
 `

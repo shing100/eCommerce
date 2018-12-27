@@ -305,7 +305,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_0__);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n{\n    categories {\n        id\n        name\n    }\n}\n"]);
+  var data = _taggedTemplateLiteral(["\n{\n    categories {\n        id\n        name\n    }\n    products(where: {\n        sale: true\n    }) {\n        id\n        name\n        subtitle\n        description\n        price\n        photo {\n            url\n        }\n    }\n}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
