@@ -225,7 +225,7 @@ var Meta = antd__WEBPACK_IMPORTED_MODULE_2__["Card"].Meta;
     cover: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       alt: "example",
       src: photoUrl,
-      height: "250px"
+      height: "270px"
     })
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Meta, {
     title: name,
