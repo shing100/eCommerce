@@ -23,7 +23,7 @@ class MyApp extends App {
             <Container>
                 <Layout>
                     <Component {...pageProps} />
-                    <Footer>This is important</Footer>
+                    <Footer>This is important! | by Lim Store</Footer>
                 </Layout>
             </Container>
         </ApolloProvider>

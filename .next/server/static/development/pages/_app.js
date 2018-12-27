@@ -203,7 +203,7 @@ function (_App) {
           apollo = _this$props.apollo;
       return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_5__["ApolloProvider"], {
         client: apollo
-      }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_2__["Container"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_1__["Layout"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Component, pageProps), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Footer, null, "This is important"))));
+      }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_2__["Container"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_1__["Layout"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Component, pageProps), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Footer, null, "This is important! | by Lim Store"))));
     }
   }], [{
     key: "getInitialProps",

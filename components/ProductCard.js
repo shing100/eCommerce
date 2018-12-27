@@ -13,7 +13,7 @@ export default ({ id, name, subtitle, photoUrl }) => (
             </a>
             </Link>
         ]}
-        cover={<img alt="example" src={photoUrl} height={"200px"} />}
+        cover={<img alt="example" src={photoUrl} height={"250px"} />}
         >
         <Meta title={name} description={subtitle} />
         </Card>

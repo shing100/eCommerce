@@ -185,6 +185,56 @@ var Header = antd__WEBPACK_IMPORTED_MODULE_1__["Layout"].Header;
 
 /***/ }),
 
+/***/ "./components/ProductCard.js":
+/*!***********************************!*\
+  !*** ./components/ProductCard.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "next/link");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "antd");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var Meta = antd__WEBPACK_IMPORTED_MODULE_2__["Card"].Meta;
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var id = _ref.id,
+      name = _ref.name,
+      subtitle = _ref.subtitle,
+      photoUrl = _ref.photoUrl;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      marginBottom: "25px"
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Card"], {
+    hoverable: true,
+    actions: [react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/product?id=".concat(id),
+      as: "/product/".concat(id)
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+      type: "eye",
+      theme: "outlined"
+    })))],
+    cover: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      alt: "example",
+      src: photoUrl,
+      height: "250px"
+    })
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Meta, {
+    title: name,
+    description: subtitle
+  })));
+});
+
+/***/ }),
+
 /***/ "./pages/index/index.js":
 /*!******************************!*\
   !*** ./pages/index/index.js ***!
@@ -249,6 +299,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Button */ "./components/Button.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "antd");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_ProductCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/ProductCard */ "./components/ProductCard.js");
+
 
 
 
@@ -261,13 +313,11 @@ var Content = antd__WEBPACK_IMPORTED_MODULE_4__["Layout"].Content;
     centerColumn: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Lim Store"),
     rightColumn: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
       href: "/cart",
-      text: "Cart",
-      btnIcon: "shopping-cart"
+      text: "Cart"
     }),
     leftColumn: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
       href: "/search",
-      text: "Search",
-      btnIcon: "search"
+      text: "Search"
     })
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Content, {
     style: {
@@ -287,7 +337,47 @@ var Content = antd__WEBPACK_IMPORTED_MODULE_4__["Layout"].Content;
       hrefAs: "/category/".concat(category.name.toLowerCase()),
       text: category.name
     });
-  }))));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      marginTop: "50px"
+    }
+  }, data && data.onSale && data.onSale.length !== 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "On Sale"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      display: "grid",
+      gridGap: "10px",
+      gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+      width: "100%"
+    }
+  }, data && data.onSale && data.onSale.map(function (product) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ProductCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      key: product.id,
+      id: product.id,
+      name: product.name,
+      subtitle: product.subtitle,
+      price: product.price,
+      photoUrl: product.photo.url
+    });
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      marginTop: "50px"
+    }
+  }, data && data.onSale && data.onSale.length !== 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "All Products"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      display: "grid",
+      gridGap: "10px",
+      gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+      width: "100%"
+    }
+  }, data && data.allProducts && data.allProducts.map(function (product) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ProductCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      key: product.id,
+      id: product.id,
+      name: product.name,
+      subtitle: product.subtitle,
+      price: product.price,
+      photoUrl: product.photo.url
+    });
+  })))));
 });
 
 /***/ }),
@@ -305,7 +395,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_0__);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n{\n    categories {\n        id\n        name\n    }\n    products(where: {\n        sale: true\n    }) {\n        id\n        name\n        subtitle\n        description\n        price\n        photo {\n            url\n        }\n    }\n}\n"]);
+  var data = _taggedTemplateLiteral(["\n{\n    categories {\n        id\n        name\n    }\n    onSale: products(where: {\n        sale: true\n    }) {\n        id\n        name\n        subtitle\n        description\n        price\n        photo {\n            url\n        }\n    }\n    allProducts: products(where: {\n        sale: false\n    }) {\n        id\n        name\n        subtitle\n        price\n        photo {\n            url\n        }\n    }\n}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
