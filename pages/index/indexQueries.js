@@ -1,33 +1,22 @@
 import { gql } from "apollo-boost";
+import { PRODUCT_FRAGMENT } from "../../fragments";
 
 export const INDEX_QUERY = gql`
-{
-    categories {
-        id
-        name
-    }
-    onSale: products(where: {
-        sale: true
-    }) {
-        id
-        name
-        subtitle
-        description
-        price
-        photo {
-            url
+    {
+        categories {
+            id
+            name
+        }
+        onSale: products(where: {
+            sale: true
+        }) {
+            ...ProductItems
+        }
+        allProducts: products(where: {
+            sale: false
+        }) {
+            ...ProductItems
         }
     }
-    allProducts: products(where: {
-        sale: false
-    }) {
-        id
-        name
-        subtitle
-        price
-        photo {
-            url
-        }
-    }
-}
+    ${PRODUCT_FRAGMENT}
 `

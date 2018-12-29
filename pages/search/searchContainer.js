@@ -28,6 +28,6 @@ export default class extends React.Component {
             this.setState({
                 canSearch: true
             })
-        }, 2000);
+        }, 1000);
     }
 }
