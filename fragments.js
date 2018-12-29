@@ -5,7 +5,6 @@ export const PRODUCT_FRAGMENT = gql`
         id
         name
         subtitle
-        description
         price
         photo {
             url
