@@ -13,8 +13,11 @@ export const INDEX_QUERY = gql`
             ...ProductItems
         }
         allProducts: products(where: {
+        OR: [{
             sale: false
-        }) {
+        }, {
+            sale: true
+        }]}) {
             ...ProductItems
         }
     }
