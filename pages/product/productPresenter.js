@@ -7,7 +7,7 @@ import CartButton from "../../components/CartButton";
 export default ({ data, toggleCart }) => (
     <>
         <Head>
-        <title>{data.product.name} | Nomad Store</title>
+        <title>{data.product.name} | Lim Store</title>
         </Head>
         <Header
         centerColumn={<h4>Product</h4>}
@@ -21,8 +21,7 @@ export default ({ data, toggleCart }) => (
             <h2>{data.product.subtitle}</h2>
             <h4>{data.product.description}</h4>
             <AntButton type="primary" onClick={toggleCart}>
-            Add to cart($
-            {data.product.price})
+            {data.product.onCart ? "Remove from cart" : `Add to cart(${data.product.price})`}
             </AntButton>
         </div>
         <style jsx>{`
