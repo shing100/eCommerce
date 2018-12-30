@@ -10,12 +10,12 @@ Graph CMS, now.sh, NextJs, ReactJs
 - yarn add express
 - yarn add graphql apollo-boost react-apollo next-with-apollo
 - yarn add antd@3.8.1
-
+- yarn add next-nprogress
 
 ### 참고 사이트
 - https://ant.design/docs/react/introduce
-
 - https://www.apollographql.com/docs/react/#starting
+- https://github.com/sergiodxa/next-nprogress
 
 ### NextJS Theory
  
