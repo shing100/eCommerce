@@ -1,12 +1,16 @@
 const exprees = require("express");
 const next = require("next");
-
+const { resolve } = require("path");
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
     const server = exprees();
+
+    server.get("/sw.js", (req, res) => {
+        app.serveStatic(req, res, resolve("./static/service-worker.js"));
+    })
 
     server.get("/product/:id", (req, res) => {
       const actualPage = "/product";
