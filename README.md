@@ -20,6 +20,7 @@ Graph CMS, now.sh, NextJs, ReactJs
 
 ### PWA
 - https://developer.mozilla.org/ko/docs/Mozilla/Mobile/Viewport_meta_tag
+- https://developer.mozilla.org/en-US/docs/Web/Manifest
 
 ### NextJS Theory
  
