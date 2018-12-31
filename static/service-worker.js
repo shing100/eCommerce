@@ -1,6 +1,6 @@
 self.addEventListener("install", (event) => {
     const offlinePage = new Request("/");
-    event.waitUntill(
+    event.waitUntil(
         fetch(offlinePage).then(response => {
             return caches.open("lim-store").then(cache => {
                 return cache.put(offlinePage, response);
