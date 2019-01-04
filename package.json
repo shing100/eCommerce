@@ -1,5 +1,5 @@
 {
-  "name": "nextjs_pwa",
+  "name": "LimStore",
   "version": "1.0.0",
   "description": "PWA bulit with Nextjs and GraphCMS",
   "license": "MIT",
@@ -12,7 +12,6 @@
     "next": "^7.0.2",
     "next-nprogress": "^1.4.0",
     "next-with-apollo": "^3.3.1",
-    "now": "^12.1.14",
     "react": "^16.7.0",
     "react-apollo": "^2.3.3",
     "react-dom": "^16.7.0"

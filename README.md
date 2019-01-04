@@ -22,8 +22,13 @@ Graph CMS, now.sh, NextJs, ReactJs
 - https://developer.mozilla.org/ko/docs/Mozilla/Mobile/Viewport_meta_tag
 - https://developer.mozilla.org/en-US/docs/Web/Manifest
 
+
+### Complate
+- https://ecommerce-ewf59p1er.now.sh/
+
+
+
 ### NextJS Theory
- 
  - [x] Introduction to NextJS
  - [x] Difference between NextJS and CRA
  - [x] What is SSR and why do we need it
