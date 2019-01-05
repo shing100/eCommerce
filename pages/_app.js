@@ -61,7 +61,7 @@ class MyApp extends App {
                 />
                 <Layout>
                     <Component {...pageProps} />
-                    <Footer>This is important! | by Lim Store</Footer>
+                    <Footer>This is important! | by Lim Store | 결제해도 상품이 전달되지 않습니다. 절대로 </Footer>
                 </Layout>
             </Container>
         </ApolloProvider>
