@@ -17,6 +17,8 @@ Graph CMS, now.sh, NextJs, ReactJs
 - https://www.apollographql.com/docs/react/#starting
 - https://github.com/sergiodxa/next-nprogress
 - https://www.favicon.cc/
+- https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API
+- https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API
 
 ### PushManager lib
 - https://github.com/web-push-libs/web-push
