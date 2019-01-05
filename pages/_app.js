@@ -25,14 +25,21 @@ class MyApp extends App {
                 .register("/sw.js")
                 .then(swReg => { 
                     console.log("SW Registered: ", swReg);
-                    Notification.requestPermission().then(permission => {
-                        if(permission === "granted") {
-                            swReg.pushManager.subscribe({
-                                userVisibleOnly: true,
-                                applicationServerKey: convertDataURIToBinary('BKAsHuj0Nqzr5wtfux6qL1OKzstMdrzNaoNXRjeht7b9jNeVAUZcT-3T0E5a53AEF0etIIwe3pmbJNGILHItb7o')
-                            }).then(pushSubscriptionObject => {
-                                console.log(pushSubscriptionObject);
+                    swReg.pushManager.getSubscription()
+                    .then(subscription => {
+                        if(subscription === null) {
+                            Notification.requestPermission().then(permission => {
+                                if (permission === "granted") {
+                                    swReg.pushManager.subscribe({
+                                        userVisibleOnly: true,
+                                        applicationServerKey: convertDataURIToBinary('BKlsXH1WCrQjbYLYh0Qfbu6MbLX3I5XtqoutfRXBXoSw6KU2q_NtIlK1LXXzIjaBuYaSiTzEeYtJaf21N-mJEmE')
+                                    }).then(pushSubscriptionObject => {
+                                        console.log(JSON.stringify(pushSubscriptionObject));
+                                    })
+                                }
                             })
+                        } else {
+                            console.log(JSON.stringify(subscription));
                         }
                     })
                 })
