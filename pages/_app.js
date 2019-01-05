@@ -5,6 +5,7 @@ import withApollo from "../lib/withApollo";
 import { ApolloProvider } from "react-apollo";
 import withNProgress from "next-nprogress";
 import NProgress from "next-nprogress/component";
+import convertDataURIToBinary from "../lib/base64";
 const { Footer } = Layout;
 
 class MyApp extends App {
@@ -19,10 +20,22 @@ class MyApp extends App {
     }
 
     componentDidMount(){
-        if("serviceWorker" in navigator){
+        if("serviceWorker" in navigator && "PushManager" in window){
             navigator.serviceWorker
                 .register("/sw.js")
-                .then(result => console.log("SW Registered: ", result))
+                .then(swReg => { 
+                    console.log("SW Registered: ", swReg);
+                    Notification.requestPermission().then(permission => {
+                        if(permission === "granted") {
+                            swReg.pushManager.subscribe({
+                                userVisibleOnly: true,
+                                applicationServerKey: convertDataURIToBinary('BKAsHuj0Nqzr5wtfux6qL1OKzstMdrzNaoNXRjeht7b9jNeVAUZcT-3T0E5a53AEF0etIIwe3pmbJNGILHItb7o')
+                            }).then(pushSubscriptionObject => {
+                                console.log(pushSubscriptionObject);
+                            })
+                        }
+                    })
+                })
                 .catch(error => console.log("Can't register SW: ", error));
         }
     }
